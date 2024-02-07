@@ -1,0 +1,21 @@
+#
+# ~/.shrc - executed by a non-login shell
+#
+
+case "$-" in *i*)
+    # interactive shell
+    alias vi=nvim
+    alias vim=nvim
+    alias dotfiles='git --git-dir="$HOME/.dotfiles" --work-tree="$HOME"'
+
+    export GPG_TTY=$(tty)
+
+    HOST=${HOST:-$(hostname)}
+    ID=${ID:-id}
+    [ "$($ID -u)" = "0" ] && _PS='#' || _PS='$'
+    PS1='${HOST%%.*}:${PWD##*/}/${_PS} '
+
+    set -o vi
+    ( set -o tabcomplete 2>/dev/null ) && set -o tabcomplete
+    ;;
+esac

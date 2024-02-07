@@ -1,0 +1,11 @@
+[user]
+	name = Malte Dehling
+	email = mdehling@gmail.com
+[alias]
+	rlog = log --reverse
+[format]
+	pretty = format:%C(auto)%h %ad%d %s%C(reset)
+[log]
+	date = iso
+[init]
+	defaultBranch = main

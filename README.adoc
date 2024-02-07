@@ -1,0 +1,20 @@
+# dotfiles
+Malte Dehling <mdehling@gmail.com>
+
+ifdef::env-github[]
+:warning-caption: :warning:
+endif::[]
+
+To install on a new system, run the following commands.
+
+WARNING: The last step will overwrite any local files without asking.
+
+[source,shell-session]
+----
+$ alias dotfiles='git --git-dir="$HOME/.dotfiles" --work-tree="$HOME"'
+$ dotfiles init
+$ dotfiles config status.showUntrackedFiles no
+$ dotfiles remote add origin git@github.com:mdehling/dotfiles.git
+$ dotfiles fetch origin main
+$ dotfiles reset --hard origin/main
+----
