@@ -1,13 +1,13 @@
 #
 # ~/.profile - executed by a login shell
 #
-OS=$(uname -s)
+
+export OS=$(uname -s)
 
 case "$OS" in
 
 SunOS)
-    LANG="C"
-    PAGER=more
+    EDITOR=vim
     ID=/usr/xpg4/bin/id
 
     PATH=/usr/local/bin:$PATH
@@ -18,6 +18,9 @@ SunOS)
     ;;
 
 NetBSD)
+    LANG=en_US.UTF-8
+
+    PAGER=less
     EDITOR=nvim
 
     PATH=/pkg/bin:/pkg/sbin:/bin:/sbin:/usr/bin:/usr/sbin
@@ -35,19 +38,19 @@ NetBSD)
     ;;
 
 Linux)
-    EDITOR=nvim
-    ;;
+    LANG=en_US.UTF-8
 
-*)
+    PAGER=less
+    EDITOR=nvim
     ;;
 
 esac
 
 
-export LANG=${LANG:-"en_US.UTF-8"}
+export LANG=${LANG:-C}
 
-export PAGER=${PAGER:-less}
-export EDITOR=${EDITOR:-vim}
+export PAGER=${PAGER:-more}
+export EDITOR=${EDITOR:-vi}
 export VISUAL=${VISUAL:-${EDITOR}}
 export ID=${ID:-id}
 

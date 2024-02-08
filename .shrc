@@ -2,8 +2,8 @@
 # ~/.shrc - executed by a non-login shell
 #
 
+# interactive shell?
 case "$-" in *i*)
-    # interactive shell
     alias vi=nvim
     alias vim=nvim
     alias dotfiles='git --git-dir="$HOME/.dotfiles" --work-tree="$HOME"'
@@ -16,6 +16,7 @@ case "$-" in *i*)
     PS1='${HOST%%.*}:${PWD##*/}/${_PS} '
 
     set -o vi
+    #( set -o promptcmds 2>/dev/null ) && set -o promptcmds
     ( set -o tabcomplete 2>/dev/null ) && set -o tabcomplete
     ;;
 esac
