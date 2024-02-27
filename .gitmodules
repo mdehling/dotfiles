@@ -4,3 +4,6 @@
 [submodule "neovim"]
 	path = .config/nvim
 	url = https://github.com/mdehling/neovim-config.git
+[submodule "neomutt"]
+	path = .config/neomutt
+	url = https://github.com/mdehling/neomutt-config.git
