@@ -65,6 +65,4 @@ if command -v gpgconf >/dev/null; then
 fi
 
 
-case "$-" in *i*)
-    export ENV="$HOME/.shrc"
-esac
+export ENV="$HOME/.shrc"
