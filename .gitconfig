@@ -2,10 +2,16 @@
 	name = Malte Dehling
 	email = mdehling@gmail.com
 [alias]
-	rlog = log --reverse
+	rlog = log --reverse -32
 [format]
 	pretty = format:%C(auto)%h %ad%d %s%C(reset)
 [log]
 	date = iso
 [init]
 	defaultBranch = main
+[gpg]
+	program = /pkg/bin/gpg2
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true
